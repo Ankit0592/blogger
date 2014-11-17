@@ -16,7 +16,7 @@ def new
 
 end
 def create
-  byebug
+  
   @article = Article.new(article_params)
   @article.save
   flash.notice = "Article Created"

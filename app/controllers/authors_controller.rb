@@ -79,13 +79,14 @@ class AuthorsController < ApplicationController
     return false
   end
 end
- #  before_filter :require_login, except: [:new, :create]
+  before_filter :require_login, except: [:new, :create]
    
- #   def require_login
- #    if !logged_in?
- #    unless params[:action]=="new" || params[:action]=="create"
- #     flash.notice = "Login Required"
- #    end
- #   end  
- # end
+   def require_login
+    
+    
+    unless params[:action]=="new" || params[:action]=="create"
+     flash.notice = "Login Required"
+    end
+     
+ end
 end
