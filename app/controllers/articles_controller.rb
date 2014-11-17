@@ -20,6 +20,7 @@ def create
   @article = Article.new(article_params)
   @article.save
   flash.notice = "Article Created"
+  
   redirect_to article_path(@article)
 end
 def destroy
